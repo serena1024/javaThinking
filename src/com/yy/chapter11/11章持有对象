@@ -1,0 +1,21 @@
+Java 实用类库提供了一套相当完整的容器来解决这个问题，其中基本类型是List，Set，QUeue，和Map。
+这些对象也叫集合类。
+11.1 泛型和类型安全的容器
+11.2 基本概念
+	Java容器类类库的用途是“保存对象”，并将其划分为两个不同的概念
+	1.Collection.一个独立元素的序列，这些元素都服从一条或多条规则。List必须按照插入的顺序保存元素，Set不能有重复元素
+	。Queue按照排队规则来确定对象产生的顺序，（通常与他们被插入的顺序相同）
+	2.Map .一组成对的键值对对象。允许使用键来查找值。
+	
+11.3 添加一组元素
+ java.util包中的Arrays和Collections类中有很多实用方法，可以在一个Collection中添加一组元素。
+ Arrays.asList()方法接受一个数组或者一个用逗号分隔的元素列表（使用可变参数），并将其转换为一个list对象。
+ Collection.addAll()方法接受一个Collection对象，以及一个数组或者逗号分隔的列表，将元素添加到Collection中。
+ 
+ Collection构造器可以接受另一个Colleciton，用它自身来初始化，因此你可以使用Arrays.list()来为这个构造器产生输入。
+ 但是，Collection.addAll()运行起来要快的多，而且构建一个不含元素的Collection，然后调用Collection.addAlll（）这种
+ 方式很方便，因此它是首选方式。
+ 
+ Collection.addAll()只接受一个Collection参数，所以不如 Arrays.asList()和Collections.addAll()灵活，这两个方法都是可变的参数列表
+ 
+ 你也可以直接使用Arrays.asList()的输出当作list,但是这样长度就固定了，如果尝试用add() delete()可能会报错
