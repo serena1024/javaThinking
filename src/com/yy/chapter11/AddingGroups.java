@@ -14,7 +14,6 @@ public class AddingGroups {
 		collection.addAll(Arrays.asList(moments));
 		Collections.addAll(collection, 11,12,13,14,15);
 		Collections.addAll(collection,moments);
-		
 		List<Integer> list = Arrays.asList(16,17,18,19,20);
 		list.set(1, 99);
 		list.add(21);
