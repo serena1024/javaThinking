@@ -79,3 +79,8 @@ foreach会更加简洁。
 	下返回队头，但是peek（）为空的时候返回null,element()会报错。
 11.11.1 PriorityQueue
 	优先队列，声明下一个弹出元素是最需要的元素。
+	你可以看到，重复是允许的，最小的值拥有最高的优先级，如果是String，空格的优先级比字母高。
+11.12 Collection 和  Iterator
+	Collection是描述所有序列容器的共性的根接口。
+11.23 Foreach 与迭代器
+	foreach语法主要用于数组，但是它也可以应用于任何Collection对象。
