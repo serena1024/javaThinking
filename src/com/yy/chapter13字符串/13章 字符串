@@ -1,3 +1,5 @@
 13.1 String对象是不可变的
 13.2 重载与String buffer
 	String对象重载“ + ”
+13.5 Formatter类
+	Java中，所有的格式化功能都是由java,util.formatter完成的。
