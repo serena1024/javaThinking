@@ -9,5 +9,6 @@ public class PetCount4 {
 			System.out.println(pet.getClass().getSimpleName() + "  ");
 			counter.count(pet);
 		}
+		System.out.println(counter);
 	}
 }
