@@ -11,7 +11,8 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import static net.mindview.uil.Print.*;
+import static net.mindview.util.Print.*;
+import static net.mindview.util.Print.print;
 
 /***
  * 		基本类型的打印容器
@@ -38,8 +39,8 @@ public class PrintingContainers {
 		print(fill(new HashSet<String>()));
 		print(fill(new TreeSet<String>()));
 		print(fill(new LinkedHashSet<String>()));
-		print(fill(new HashMap<String,String>()));
-		print(fill(new TreeMap<String,String>()));
-		print(fill(new LinkedHashMap<String,String>()));
+		//print(fill(new HashMap<String,String>()));
+		//print(fill(new TreeMap<String,String>()));
+		//print(fill(new LinkedHashMap<String,String>()));
 	}
 }
