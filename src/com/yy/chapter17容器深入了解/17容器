@@ -1,0 +1,19 @@
+17.3 Collections的功能方法
+    boolean addAll()添加参数中的所有元素
+    void clear() 移除容器中所有元素
+    boolean contains() 判断是否包含元素
+    boolean containsAll () 判断是否包含所有元素
+    boolean isEmpty()容器中元素为空是返回true
+    Iterator iterator()遍历容器中的元素
+    boolean remove() 移除元素
+    boolean remove()移除所有元素
+    boolean remainAll() 交集的概念
+
+17.6.1 SortedSet
+    SortedSet 中的元素可以保证处于一个有序的状态“按照对象的比较函数进行排序而不是插入的顺序”
+17.7 队列
+    除了并发应用，Queue在SE5中的两个实现是LinkedList和PriorityQueue，他们的差异在于排序行为而不是性能。
+
+
+
+
