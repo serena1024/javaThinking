@@ -13,7 +13,23 @@
     SortedSet 中的元素可以保证处于一个有序的状态“按照对象的比较函数进行排序而不是插入的顺序”
 17.7 队列
     除了并发应用，Queue在SE5中的两个实现是LinkedList和PriorityQueue，他们的差异在于排序行为而不是性能。
+17.8 理解Map
+    性能是映射表中的一个重要问题，当在get（）中使用线性搜索时，执行速度会非常的慢，。而这正是HashMap提高速度的地方
+    。HashMap使用了散列码，来取代对键的缓慢搜索。散列码是相对唯一的。HashMap就是使用hashCode（）进行快速查询的，
+    此方法能够显著提高性能。
 
+   LinkedHashMap
+   为了提高速度，LinkedHashMap散裂化了所有元素，但是在遍历键值对的时候又按照插入的顺序进行返回键值对。此外，可以在
+   构造器中设定LinkedHashMap，使之基于访问的最近最少使用算法（LRU），于是没有被访问的就会出现在队列的前面。
 
+    如果不为你的键覆盖hashCode（）和equals()  那么使用散列式的数据结构（HashSet,HashMap,LinkedHashSet,LinkedHashMap）就无法
+    正确处理你的键。
+
+    容器之间的区别通常在于，所使用的接口用什么样的数据结构实现的。例如，ArrayList和LinkedList都实现了List接口，无论选择哪一个
+    ，基本的list操作都是相同的。但是ArrayList底层由数组支持；LinkedList是由双向链表实现的，其中每个对象包含数据的同时还
+    指向链表中前一个和后一个元素的引用。因此如果需要经常在表中插入或者删除元素LinkedList更合适；否则应该使用速度更快的ArrayList。
+
+    Set可以被实现为HashSet，LinkedHashSet和TreeSet。HashSet是最常用的，查询速度最快；LinkedHashSet保持了元素与的插入顺序，
+    TreeSet基于TreeMap，生成一个总是处于排序状态的Set。
 
 
