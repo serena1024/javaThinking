@@ -4,3 +4,13 @@
  18.1.1目录列表器
     假设我们想看一个目录列表，可以使用两种方法来使用File对象。如果我们调用不带参数的list()方法，便可以获得
     次FIle对象包含的全部列表。但是如果想获得一个受限列表，例如指定后缀文件的列表，就要用到目录过滤器。
+
+    无论何时使用readLine() 都还不应该使用DataInputStream，而使用BufferedReader.
+ 18.5 自我独行的类，RandomAccessFile
+    RandomAccessFile适用于大小已知的记录组成的文件，所以我们可以使用seek（）将记录转移到另一处，然后读取或者修改记录。
+ 18.6.4基本文件的输出
+    FileWriter对象看可以向文件写入数据。
+ 18.6.5 存储和恢复数据
+    PrintWriter可以对数据进行格式化。但是为了输出可供另一个“流”恢复的数据，我们需要DataOutputStream写入数据，
+    用DataInputStream恢复数据。
+
