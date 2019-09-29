@@ -13,4 +13,5 @@
  18.6.5 存储和恢复数据
     PrintWriter可以对数据进行格式化。但是为了输出可供另一个“流”恢复的数据，我们需要DataOutputStream写入数据，
     用DataInputStream恢复数据。
+    java I/O 类库中的类支持读写压缩格式的数据流。压缩类库是按照字节方式处理的。
 

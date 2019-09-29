@@ -1,0 +1,8 @@
+19.1基本Enum特性
+        ordinal()返回枚举中每个示例在声明时的顺序，从0开始。可以使用==来比较Enum实例，编译器会自动为你提供
+    equals和hashCode方法。Enum类实现了Comparable接口，所以它具有compareTo方法。同时它还实现了Serializable接口。
+        如果在Enum实例上调用getDeclaringClass()方法，就会知道你其所属的类。
+        name()方法返回enum实例声明时的名字，这与toString（）方法效果相同ValueOF是在Enum中定义的static方法，
+        它根据给定的名字返回相应的Enum实例，如果不存在给定名字实例，将会抛出异常。
+19.1.1 将静态导入用于enum
+    使用static import能够将enum实例的标识符带入当前的命名空间，所以无需再用enum类型来修饰enum实例。
