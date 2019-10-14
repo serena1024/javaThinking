@@ -15,7 +15,7 @@ public class LiftOff implements Runnable{
     @Override
     public void run() {
         while (countDown -- > 0){
-            System.out.println(status());
+            System.out.print(status());
             Thread.yield();
             //暂停当前线程,依赖 CPU 的时间片划分
         }
