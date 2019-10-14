@@ -17,3 +17,6 @@
 21.2.3 使用Executor
     java.util.concurrent.Executor将为你管理Thread对象，从而简化并发编程。
     SingleThreadPool就像是线程数量为1的FixedThreadPool
+21.2.4 从任务中产生返回值
+    Runnable是执行工作的独立任务，但是它不范湖任何值。如果你希望在任务完成时能返回一个值，那么可以实现一个Callable接口。
+  java se5中引入的Callable是一种具有类型参数的泛型，他的类型参数表示的是从方法call()中返回的值，并且必须使用ExecutorService.submit()方法调用它
