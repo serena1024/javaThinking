@@ -14,3 +14,6 @@
     Thread构造器就只需要一个Runnable对象。调用Thread对象的start()方法为该线程执行必须的初始化操作，然后再调用Runnable中的run(),
   以便在这个新的线程中启动该任务。
     一个线程会创建一个单独的执行线程，在对start()的调用完成之后，它仍旧会存在。
+21.2.3 使用Executor
+    java.util.concurrent.Executor将为你管理Thread对象，从而简化并发编程。
+    SingleThreadPool就像是线程数量为1的FixedThreadPool
