@@ -1,90 +1,90 @@
-Java ʵ������ṩ��һ���൱���������������������⣬���л���������List��Set��QUeue����Map��
-��Щ����Ҳ�м����ࡣ
-11.1 ���ͺ����Ͱ�ȫ������
-11.2 ��������
-	Java������������;�ǡ�������󡱣������仮��Ϊ������ͬ�ĸ���
-	1.Collection.һ������Ԫ�ص����У���ЩԪ�ض�����һ�����������List���밴�ղ����˳�򱣴�Ԫ�أ�Set�������ظ�Ԫ��
-	��Queue�����Ŷӹ�����ȷ�����������˳�򣬣�ͨ�������Ǳ������˳����ͬ��
-	2.Map .һ��ɶԵļ�ֵ�Զ�������ʹ�ü�������ֵ��
-	
-11.3 ����һ��Ԫ��
- java.util���е�Arrays��Collections�����кܶ�ʵ�÷�����������һ��Collection������һ��Ԫ�ء�
- Arrays.asList()��������һ���������һ���ö��ŷָ���Ԫ���б���ʹ�ÿɱ��������������ת��Ϊһ��list����
- Collection.addAll()��������һ��Collection�����Լ�һ��������߶��ŷָ����б�����Ԫ�����ӵ�Collection�С�
- 
- Collection���������Խ�����һ��Colleciton��������������ʼ������������ʹ��Arrays.list()��Ϊ����������������롣
- ���ǣ�Collection.addAll()��������Ҫ��Ķ࣬���ҹ���һ������Ԫ�ص�Collection��Ȼ�����Collection.addAlll��������
- ��ʽ�ܷ��㣬���������ѡ��ʽ��
- 
- Collection.addAll()ֻ����һ��Collection���������Բ��� Arrays.asList()��Collections.addAll()���������������ǿɱ�Ĳ����б�
- 
- ��Ҳ����ֱ��ʹ��Arrays.asList()���������list,�����������Ⱦ͹̶��ˣ����������add() delete()���ܻᱨ��
- 
- 11.4 �����Ĵ�ӡ
- 	�����ʹ��Arrays.toString��������������Ŀɴ�ӡ��ʾ�����Ǵ�ӡ���������κΰ���
- 	Queueֻ����һ�˲���һ��ɾ��
- 	Arraylist��linkedlist����list���ͣ����ǰ��ղ����˳�򱣴�Ԫ��
- 	HashSet,TreeSet��LinkedHashSet����set���ͣ������ʾ��set�У�ÿ����ͬ����ֻ����һ�Σ�HashSet�洢��ʽ���ӣ���һ������ȡԪ�صķ�ʽ
-  ����˳����Ҫ�����Ҫ���򣬾�ʹ��TreeSet�������ձȽϽ�������򱣴���󣻻�����LinkedHashSet�������ձ����ӵ����񱣴����
- 11.5 List
- 	�����ֻ������͵�List
- 	*������ArrayList,�������������Ԫ�أ�������list���м������Ƴ�Ԫ��ʱ������
- 	*LinkedList ����ͨ�����۽ϵ͵���List�м���еĲ����ɾ���������ṩ���Ż���˳����ʡ�LinkedList��������ʷ�������ԱȽ�����
- 	�����������Լ���Array List����
- 	
-11.6 ������
-	�κ������඼������ĳ�ַ�ʽ���Բ���Ԫ�ز��������ٴ�ȡ�ء�����list��add()�ǲ���Ԫ�ط���֮һ��get������ȡ������֮һ��
-	��������һ���������Ĺ����Ǳ�����ѡ�������еĶ��󣬶��ͻ��˳���Ա����Ҫ֪������ĸ����еײ�Ľṹ�����⣬������ͨ������Ϊ����������
-	���������Ĵ���С����˾������Լ����Ե�������Щ��ֵ����ƣ����磬Java��Iteratorֻ�ܵ����ƶ������ֻ��������
-	1.ʹ�÷���iterator����Ҫ����������һ��Iterator��Iterator��׼���õķ������ڵĵ�һ��Ԫ��
-	2.ʹ��next������������е���һ��Ԫ��
-	3.ʹ��hasNext()�������·��ص�Ԫ��ɾ��
-	4.ʹ��remove�������������·��ص�Ԫ��ɾ��
-	
-	����Iterator�Ͳ���ҪΪ�����е�Ԫ�����������ˣ�����hasNext��next���ĵ����顣���ֻ����ǰ����List��������Ҫ�޸�List������
-foreach����Ӽ�ࡣ
-	TreeSet:::
-	cannot be cast to java.lang.Comparable����������쳣���󣬾���˵treeMap������treeSet������֪�������put���ͻᱨ����쳣���󡣵�һ��putʱ����ΪΪ�գ����Բ���Ҫ�Ƚϣ������ᱨ�������ǵ��ڶ���putʱ��treeMap������treeSet��Ϊ��ȷ����������ľͱ���Ƚϣ����ʱ����������key�����޷��Ƚϣ����׳����쳣���� 
-Ҫ�������쳣���������ֽ���취����һ���ڹ���TreeMapʱָ��һ���Ƚ���������Ƚ������ڱȽ�����ֵ�����ҷ���һ������ֵ��Ϊ���ǵıȽϽ�����ڶ��־���keyʵ��Comparable�ӿڡ�
+Java 实用类库提供了一套相当完整的容器来解决这个问题，其中基本类型是List，Set，QUeue，和Map。
+这些对象也叫集合类。
+11.1 泛型和类型安全的容器
+11.2 基本概念
+Java容器类类库的用途是“保存对象”，并将其划分为两个不同的概念
+1.Collection.一个独立元素的序列，这些元素都服从一条或多条规则。List必须按照插入的顺序保存元素，Set不能有重复元素
+。Queue按照排队规则来确定对象产生的顺序，（通常与他们被插入的顺序相同）
+2.Map .一组成对的键值对对象。允许使用键来查找值。
+
+11.3 添加一组元素
+java.util包中的Arrays和Collections类中有很多实用方法，可以在一个Collection中添加一组元素。
+Arrays.asList()方法接受一个数组或者一个用逗号分隔的元素列表（使用可变参数），并将其转换为一个list对象。
+Collection.addAll()方法接受一个Collection对象，以及一个数组或者逗号分隔的列表，将元素添加到Collection中。
+
+Collection构造器可以接受另一个Colleciton，用它自身来初始化，因此你可以使用Arrays.list()来为这个构造器产生输入。
+但是，Collection.addAll()运行起来要快的多，而且构建一个不含元素的Collection，然后调用Collection.addAlll（）这种
+方式很方便，因此它是首选方式。
+
+Collection.addAll()只接受一个Collection参数，所以不如 Arrays.asList()和Collections.addAll()灵活，这两个方法都是可变的参数列表
+
+你也可以直接使用Arrays.asList()的输出当作list,但是这样长度就固定了，如果尝试用add() delete()可能会报错
+
+11.4 容器的打印
+你必须使用Arrays.toString（）来产生数组的可打印表示，但是打印容器无需任何帮助
+Queue只允许一端插入一段删除
+Arraylist和linkedlist都是list类型，都是按照插入的顺序保存元素
+HashSet,TreeSet，LinkedHashSet都是set类型，输出显示再set中，每个相同的项只保存一次，HashSet存储方式复杂，是一种最快获取元素的方式
+所以顺序不重要，如果要排序，就使用TreeSet，它按照比较结果的升序保存对象；或者用LinkedHashSet，它按照被添加的孙旭保存对象
+11.5 List
+有两种基本类型的List
+*基本的ArrayList,它长于随机访问元素，但是在list的中间插入和移除元素时较慢。
+*LinkedList 。它通过代价较低的在List中间进行的插入和删除操作，提供了优化的顺序访问。LinkedList在随机访问仿麦呢相对比较慢，
+但是他的特性集较Array List更大。
+
+11.6 迭代器
+任何容器类都必须有某种方式可以插入元素并将他们再次取回。对于list，add()是插入元素方法之一，get（）是取出方法之一。
+迭代器是一个对象，他的工作是遍历并选择序列中的对象，而客户端程序员不需要知道或关心该序列底层的结构。此外，迭代器通常被称为轻量级对象
+，创建它的代价小。因此经常可以见到对迭代器有些奇怪的限制，例如，Java的Iterator只能单向移动，这个只能用来：
+1.使用方法iterator（）要球容器返回一个Iterator。Iterator将准备好的返回徐磊的第一个元素
+2.使用next（）获得序列中的下一个元素
+3.使用hasNext()迭代器新返回的元素删除
+4.使用remove（）将迭代器新返回的元素删除
+
+有了Iterator就不需要为容器中的元素数量担心了，那是hasNext和next关心的事情。如果只是向前便利List，并不需要修改List本身，
+foreach会更加简洁。
+TreeSet:::
+cannot be cast to java.lang.Comparable，遇到这个异常错误，就是说treeMap（或者treeSet）并不知道该如何put，就会报这个异常错误。第一次put时，因为为空，所以不需要比较，即不会报错。但是当第二次put时，treeMap（或者treeSet）为了确保他是有序的就必须比较，这个时候发现这两个key根本无法比较，则抛出该异常错误。
+要解决这个异常错误有两种解决办法。第一种在构造TreeMap时指定一个比较器，这个比较器用于比较两个值，并且返回一个整数值作为他们的比较结果。第二种就是key实现Comparable接口。
 
 11.6.1 ListIterator
- 	ListIterator��һ������ǿ���Iterator�����ͣ���ֻ�����ڸ���List�ķ��ʣ�����Iteratorֻ�ܵ����ƶ�������ListIterator����˫���ƶ���
- �������Բ�������ڵ��������б���ָ��ĵ�ǰλ�õ�ǰһ���ͺ�һ��Ԫ�ص����������ҿ���ʹ��set()�����滻���ķ��ʹ������һ��Ԫ�ء�
- 	�����ͨ������ListIterator()����һ��ָ��List��ʼ����ListIterator �����һ�����ͨ������ListIterator��n����������
-һ��һ��ʼ��ָ���б�����Ϊn��Ԫ�ش��� 	ListIterator��
+ListIterator是一个更加强大的Iterator子类型，它只能用于各种List的访问，尽管Iterator只能单向移动，但是ListIterator可以双向移动。
+它还可以产生相对于迭代器在列表中指向的当前位置的前一个和后一个元素的索引，并且可以使用set()方法替换它的访问过的最后一个元素。
+你可以通过调用ListIterator()产生一个指向List开始处的ListIterator ，并且还可以通过调用ListIterator（n）方法创建
+一个一开始就指向列表索引为n的元素处的 	ListIterator。
 
 11.7 LinkedList
-	LinkedList��Array Listһ��ʵ���˻�����List�ӿڣ�������ִ�в����ɾ��������Array List����Ч���������������
-��������ҪѷɫһЩ��LinkedList������������ջ�����л���˫�˶��еķŸ���getFirst()��element()��ȫһ����
-���Ƿ����б�ͷ��һ��Ԫ�أ������Ƴ��������listΪ�����׳�NoSuchElementException.peek������������������΢�в���
-�����б�Ϊ�յ�ʱ�򷵻�null.
-	removeFirst()��remove��������ȫһ���ģ��Ƴ��������б���ͷ���б�ͷΪ�յ�ʱ�򱨴���poll(),���б�Ϊ�յ�ʱ�򷵻�null
-	addFirst()��add()��addLast������ͬ�����Ƕ���ĳ��Ԫ�ز��뵽�б���β���ˣ�����
-	removeLast()�Ƴ��������б������һ��Ԫ�ء�
-11.8 ջ
-	ջ������ȳ���������LIFO����LinkedList��ֱ��ʵ��ջ�����й��ܵķ�������˿��԰�Linked List����ջ��ʹ��
+LinkedList和Array List一样实现了基本的List接口，但是它执行插入和删除操作比Array List更高效，但是在随机访问
+操作方面要逊色一些。LinkedList还添加了用作栈，队列或者双端队列的放噶。getFirst()和element()完全一样，
+都是返回列表头第一个元素，并不移除它，如果list为空则抛出NoSuchElementException.peek（）与这两个方法稍微有差异
+它在列表为空的时候返回null.
+removeFirst()和remove（）是完全一样的，移除并返回列表的头，列表头为空的时候报错。poll(),在列表为空的时候返回null
+addFirst()与add()和addLast（）相同，他们都将某个元素插入到列表额尾（端）部。
+removeLast()移除并返回列表的最后一个元素。
+11.8 栈
+栈，后进先出的容器（LIFO）。LinkedList能直接实现栈的所有功能的方法，因此可以把Linked List当作栈来使用
 
-11.9 Set 
-	set�������ظ���Ԫ�ء�Set���ʹ�õ��ǲ��Թ����ԣ�����Ժ����׵�ѯ��ĳ�������Ƿ���set�С�ͨ����ѡ��һ��Hash Set��ʵ�֣�
-��ר�ŶԿ��ٲ��ҽ������Ż���
-	set���к�collection��ȫһ���Ľӿڣ�û���κζ���Ĺ��ܡ�HashSetʹ����ɢ�к�����TreeSet��Ԫ�ش洢�ں������
-	ʹ��contains������set�Ĺ����ԡ�
-	
+11.9 Set
+set不保存重复的元素。Set最常被使用的是测试归属性，你可以很容易地询问某个对象是否在set中。通常会选择一个Hash Set的实现，
+它专门对快速查找进行了优化。
+set具有和collection完全一样的接口，没有任何额外的功能。HashSet使用了散列函数，TreeSet将元素存储在红黑树中
+使用contains来测试set的归属性。
+
 11.10 Map
-	������ӳ�䵽��������.Map ���Է������ļ�set������ֵCollection���������ļ�ֵ�Ե�set��Keyset()�������������м���set
+将对象映射到其他对象.Map 可以返回他的键set，他的值Collection，或者它的键值对的set。Keyset()方法产生了所有键的set
 
 11.11 Queue
-	������һ���Ƚ��ȳ���������FIFO���������ٲ���������ر���Ҫ��LinkedList�ṩ�˷���֧�ֶ�����Ϊ��
-	offer������Queue�ķ���֮һ��������������£���һ��Ԫ�ز��뵽��β�����߷���false��peek()��element()���ڲ��Ƴ������
-	�·��ض�ͷ������peek����Ϊ�յ�ʱ�򷵻�null,element()�ᱨ����
+队列是一个先进先出的容器（FIFO）。队列再并发编程中特别重要。LinkedList提供了方法支持队列行为。
+offer（）是Queue的方法之一，在允许的情况下，将一个元素插入到队尾，或者返回false。peek()和element()都在不移除的情况
+下返回队头，但是peek（）为空的时候返回null,element()会报错。
 11.11.1 PriorityQueue
-	���ȶ��У�������һ������Ԫ��������Ҫ��Ԫ�ء�
-	����Կ������ظ��������ģ���С��ֵӵ����ߵ����ȼ��������String���ո�����ȼ�����ĸ�ߡ�
-11.12 Collection ��  Iterator
-	Collection�������������������Ĺ��Եĸ��ӿڡ�
-11.13 Foreach �������
-	foreach�﷨��Ҫ�������飬������Ҳ����Ӧ�����κ�Collection����
-11.13.1 �������������÷�
-	�������������������ģʽ����Ϊ������ṩ�ض��ӿ�������foreach��䡣������һ���ӿڲ���Ҫ��һ���ӿ�ʱ���������Ϳ��Խ�����⡣
- �����ϣ����Ĭ�ϵ�ǰ��������Ļ����ϣ����Ӳ������������������������Ҳ���ʹ�ø��ǣ�����������һ���ܹ�����Iterable����ķ�����
- �ö����������foreach��䡣
+优先队列，声明下一个弹出元素是最需要的元素。
+你可以看到，重复是允许的，最小的值拥有最高的优先级，如果是String，空格的优先级比字母高。
+11.12 Collection 和  Iterator
+Collection是描述所有序列容器的共性的根接口。
+11.13 Foreach 与迭代器
+foreach语法主要用于数组，但是它也可以应用于任何Collection对象。
+11.13.1 适配器方法惯用法
+适配器部分来自于设计模式，因为你必须提供特定接口以满足foreach语句。当你有一个接口并需要另一个接口时，适配器就可以解决问题。
+这里，我希望在默认的前向迭代器的基础上，添加产生反向迭代器的能力，因此我不能使用覆盖，而是添加了一个能够产生Iterable对象的方法。
+该对象可以用于foreach语句。
